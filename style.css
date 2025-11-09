@@ -1,0 +1,42 @@
+
+.hero-bg {
+  background: url("photo/gp.png") no-repeat center center/cover;
+  color: white; /* ensures text is visible */
+  position: relative;
+}
+
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4); /* dark overlay for readability */
+}
+
+.hero-bg h1, 
+.hero-bg p {
+  position: relative; /* keeps text above overlay */
+  z-index: 1;
+}
+
+.btn-glow {
+  background-color: transparent;
+  color: #000;                     /* black text initially */
+  font-weight: bold;               /* bold text */
+  border: 1px solid #00ffcc;       /* neon border */
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #00ffcc;    /* soft glow border */
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn-glow:hover {
+  background-color: #00ffcc;       /* neon background on hover */
+  color: #000;                     /* keep text black or invert to white */
+  box-shadow: 0 0 30px #00ffcc;    /* strong glow */
+  transform: scale(1.05);          /* slight zoom on hover */
+}
